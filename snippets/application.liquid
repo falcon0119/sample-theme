@@ -1,0 +1,29 @@
+{% comment %}
+  Renders progressive web app related meta tags and links.
+
+  Usage:
+  {% render 'application' %}
+{% endcomment %}
+
+<meta name="application-name" content="{{ settings.application_name }}">
+<meta name="apple-mobile-web-app-title" content="{{ settings.application_name }}">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+{% if settings.application_splash_screen != blank %}
+  <link rel="apple-touch-startup-image" href="{{ settings.application_splash_screen }}">
+{% endif %}
+
+<meta name="theme-color" content="{{ settings.application_theme_color }}">
+
+<link rel="manifest" href="{{ 'manifest.json' | asset_url }}" type="application/json">
+
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('{{ 'service-worker.js' | asset_url }}')
+        .catch((error) => console.log('Service Worker registration failed:', error));
+    }
+  </script>
+
