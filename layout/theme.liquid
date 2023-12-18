@@ -236,8 +236,6 @@
       >
     {%- endif -%}
 
-    {% render 'application' %}
-
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -301,35 +299,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    <script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const chunkSize = 1; // limit this to 5! Shopify limits 5 sections per request
-    for (let i = 0; i < window.asyncSects.length; i += chunkSize) {
-      const sects = window.asyncSects.slice(i, i + chunkSize);
-
-      fetch('/cart/update.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          sections: sects.map(s=>s.id).join(','),
-          sections_url: `${window.location.pathname}?view=test`
-        })
-      }).then(res => res.json()).then(data => {
-        Object.keys(data.sections).forEach(s => {
-          document.getElementById(sects[0].hookname).outerHTML = data.sections[s]
-          window.asyncLoads++;
-        })
-
-        if(window.asyncLoads === window.asyncSects.length) {
-          // Optionally call some initialization code here
-          //   if your sections only initialize on load
-        }
-      })
-    }
-  })
-</script>
   </body>
 </html>
