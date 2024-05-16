@@ -83,8 +83,10 @@
         "custome_theme_app_extension_anouncement_bar_9rtYnG": {
           "type": "shopify:\/\/apps\/custome-theme-app-extension\/blocks\/anouncement_bar\/37afd51b-751d-45c4-9f9e-48cbfa426a19",
           "settings": {
-            "product": "{{product}}",
-            "colour": "#ff0000"
+            "colour": "#ff0000",
+            "text_color": "#e90016",
+            "padding": "10px",
+            "border_color": "#f5c6cb"
           }
         }
       },
