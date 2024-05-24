@@ -82,8 +82,9 @@
       "blocks": {
         "custome_theme_app_extension_anouncement_bar_9rtYnG": {
           "type": "shopify:\/\/apps\/custome-theme-app-extension\/blocks\/anouncement_bar\/37afd51b-751d-45c4-9f9e-48cbfa426a19",
+          "disabled": true,
           "settings": {
-            "announcement_text": "システムのアップデートに移行のため、5\/21~5\/22は保証登録及び修理依頼をご利用いただけません。<br>お手数をおかけしますが5\/23 13:00~ご登録をお願い致します。",
+            "announcement_text": "システムのアップデートに移行のため、5\/21~5\/22は保証登録及び修理依頼をご利用いただけません。お手数をおかけしますが5\/23 13:00~ご登録をお願い致します。",
             "text_color": "#e90016",
             "padding": "10px",
             "border_color": "#f5c6cb"
@@ -109,15 +110,6 @@
         "include_margins": true
       }
     },
-    "f560ba8d-7fcf-4a46-b737-440d21988939": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div data-anygift=\"marker\"><\/div>",
-        "color_scheme": "accent-2",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -141,7 +133,6 @@
     "17158460133d1deb99",
     "1715845457a61c5384",
     "1715845467e47081fe",
-    "f560ba8d-7fcf-4a46-b737-440d21988939",
     "related-products"
   ]
 }
