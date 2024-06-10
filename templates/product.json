@@ -27,6 +27,13 @@
           "settings": {
           }
         },
+        "wholesale_price_app_star_rating_7GJG9Q": {
+          "type": "shopify:\/\/apps\/wholesale-price-app\/blocks\/star_rating\/c87ecd22-4f5e-4418-9066-1c2b111ec9eb",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -57,6 +64,7 @@
         "vendor",
         "variant_picker",
         "quantity_selector",
+        "wholesale_price_app_star_rating_7GJG9Q",
         "price",
         "buy_buttons",
         "description",
